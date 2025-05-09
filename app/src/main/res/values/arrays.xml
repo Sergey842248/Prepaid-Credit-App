@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="providers">
+        <item>Aldi Talk</item>
+        <item>Blau</item>
+        <item>Congstar</item>
+        <item>klarmobil</item>
+        <item>Lidl Connect</item>
+        <item>Lyca Mobile</item>
+        <item>NORMA Connect</item>
+        <item>O2</item>
+        <item>Ortel Mobile</item>
+        <item>otelo</item>
+        <item>Telekom</item>
+        <item>Vodafone</item>
+    </string-array>
+</resources>
