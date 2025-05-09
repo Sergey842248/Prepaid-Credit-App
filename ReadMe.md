@@ -18,5 +18,5 @@ An app to easily top up your Prepaid credits.
 ## Usage
 1. Open the app
 2. Type your Top-Up PIN Code
-3. Click "Top Up" Button
+3. Click "TOP UP" Button
 4. Tap "Cancel" in the Pop-Up Dialog
