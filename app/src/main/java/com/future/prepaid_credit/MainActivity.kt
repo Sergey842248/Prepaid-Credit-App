@@ -118,10 +118,28 @@ class MainActivity : AppCompatActivity() {
         try {
             // Get the USSD code format for the selected provider
             val ussdCodeFormat = providerUssdCodes[selectedProvider] ?: "*100*%s%23"
+
+            // Check if the USSD code format is valid
+            if (ussdCodeFormat.isNullOrEmpty()) {
+                Toast.makeText(this, "Invalid USSD code format for the selected provider", Toast.LENGTH_SHORT).show()
+                return
+            }
             
             // Format the USSD code with the recharge code
-            val ussdCode = String.format(ussdCodeFormat, code)
-            
+            if (code.isNullOrEmpty()) {
+                Toast.makeText(this, "Recharge code is empty", Toast.LENGTH_SHORT).show()
+                return
+            }
+
+            // Log the values of ussdCodeFormat and code
+            android.util.Log.d("PrepaidCredit", "ussdCodeFormat: $ussdCodeFormat")
+            android.util.Log.d("PrepaidCredit", "code: $code")
+
+            // Construct the USSD code directly
+            // The format is typically *CODE*<recharge_code>#
+            // We need to replace %s with the actual code
+            val ussdCode = ussdCodeFormat.replace("%s", code)
+
             val uri = Uri.parse("tel:$ussdCode")
             val intent = Intent(Intent.ACTION_CALL, uri)
             startActivity(intent)

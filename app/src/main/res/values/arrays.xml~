@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="providers">
+        <item>Telekom</item>
+        <item>Vodafone</item>
+        <item>O2</item>
+        <item>Aldi Talk</item>
+        <item>Congstar</item>
+        <item>Lidl Connect</item>
+    </string-array>
+</resources>
